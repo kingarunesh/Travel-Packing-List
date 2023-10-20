@@ -11,3 +11,141 @@ html {
 body {
     font-family: sans-serif;
 }
+
+//SECTION :     style
+.conatiner {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 12rem 8rem 1fr auto;
+    min-height: 100vh;
+
+    &__header {
+        background-color: #cc423a;
+        padding: 2rem;
+        text-align: center;
+        color: #ccc;
+
+        h1 {
+            font-size: 3.6rem;
+        }
+
+        p {
+            margin-top: 0.6rem;
+            font-size: 1.8rem;
+        }
+    }
+
+    &__form {
+        background-color: #99322c;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &--input {
+            display: flex;
+            gap: 0.8rem;
+            align-items: center;
+
+            label {
+                margin-right: 2rem;
+                font-size: 1.8rem;
+            }
+
+            select,
+            input {
+                font-size: 1.8rem;
+                padding: 0.6rem;
+                border-radius: 1rem;
+                border: none;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            // input:focus {
+            //     outline: none;
+            // }
+
+            button {
+                cursor: pointer;
+                font-size: 1.8rem;
+                padding: 0.6rem 1.2rem;
+                border-radius: 1rem;
+                border: none;
+            }
+        }
+    }
+
+    &__main {
+        background-color: #33110f;
+        padding-bottom: 4rem;
+
+        &--items {
+            width: 90%;
+            // background-color: #ededed;
+            margin: 2rem auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &--filter {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10rem;
+
+            select,
+            button {
+                font-size: 1.8rem;
+                padding: 0.8rem 1.2rem;
+                border-radius: 1rem;
+                text-transform: uppercase;
+                cursor: pointer;
+                background-color: #ddd;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            button {
+                background-color: red;
+                border: none;
+                color: #eee;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        gap: 1.8rem;
+        align-items: center;
+        font-size: 2.6rem;
+        padding: 1rem;
+
+        &--checkbox {
+            input {
+                transform: scale(2);
+            }
+        }
+
+        &--text {
+            color: #eee;
+        }
+
+        &--close-btn {
+            cursor: pointer;
+        }
+    }
+
+    &__footer {
+        background-color: #cc423a;
+        font-size: 1.8rem;
+        text-align: center;
+        padding: 2rem;
+    }
+}

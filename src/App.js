@@ -1,7 +1,17 @@
+import Header from "./components/Header";
+import Form from "./components/Form";
+import PackingList from "./components/PackingList";
+import Footer from "./components/Footer";
+
 export default function App() {
     return (
         <>
-            <h1>App</h1>
+            <div className="conatiner">
+                <Header />
+                <Form />
+                <PackingList />
+                <Footer />
+            </div>
         </>
     );
 }
