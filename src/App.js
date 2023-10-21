@@ -53,7 +53,7 @@ export default function App() {
                     onDeleteHandler={deleteHandler}
                     onClearHandler={clearHandler}
                 />
-                <Footer />
+                <Footer items={items} />
             </div>
         </>
     );
