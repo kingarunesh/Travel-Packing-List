@@ -1,36 +1,13 @@
 import Item from "./Item";
 
-export default function PackingList() {
+export default function PackingList({ items, onPackedHandler, onDeleteHandler }) {
     return (
         <>
             <main className="conatiner__main">
                 <section className="conatiner__main--items">
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
+                    {items.map((item) => (
+                        <Item item={item} onPackedHandler={onPackedHandler} onDeleteHandler={onDeleteHandler} key={item.id} />
+                    ))}
                 </section>
 
                 <section className="conatiner__main--filter">
