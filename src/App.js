@@ -13,9 +13,6 @@ export default function App() {
     const addItemHandler = function (e) {
         e.preventDefault();
 
-        //  remove later
-        console.log(`${total} : ${title}`);
-
         //  new item object
         const newItem = {
             id: Date.now(),
@@ -26,8 +23,6 @@ export default function App() {
 
         //  add new item to list
         setItems((items) => [...items, newItem]);
-
-        console.log(items);
 
         //  clear input
         setTotal(1);
@@ -42,12 +37,21 @@ export default function App() {
         setItems((items) => items.filter((item) => item.id !== id));
     };
 
+    const clearHandler = function () {
+        setItems([]);
+    };
+
     return (
         <>
             <div className="conatiner">
                 <Header />
                 <Form total={total} setTotal={setTotal} title={title} setTitle={setTitle} addItemHandler={addItemHandler} />
-                <PackingList items={items} onPackedHandler={packedHandler} onDeleteHandler={deleteHandler} />
+                <PackingList
+                    items={items}
+                    onPackedHandler={packedHandler}
+                    onDeleteHandler={deleteHandler}
+                    onClearHandler={clearHandler}
+                />
                 <Footer />
             </div>
         </>

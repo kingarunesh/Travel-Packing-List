@@ -1,6 +1,6 @@
 import Item from "./Item";
 
-export default function PackingList({ items, onPackedHandler, onDeleteHandler }) {
+export default function PackingList({ items, onPackedHandler, onDeleteHandler, onClearHandler }) {
     return (
         <>
             <main className="conatiner__main">
@@ -17,7 +17,7 @@ export default function PackingList({ items, onPackedHandler, onDeleteHandler })
                         <option value="packed">sort by packed item</option>
                     </select>
 
-                    <button>Clear all</button>
+                    <button onClick={onClearHandler}>Clear all</button>
                 </section>
             </main>
         </>
