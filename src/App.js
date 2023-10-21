@@ -38,7 +38,8 @@ export default function App() {
     };
 
     const clearHandler = function () {
-        setItems([]);
+        const confirm = window.confirm("Are you sure to delete all items from your list?");
+        confirm && setItems([]);
     };
 
     return (
